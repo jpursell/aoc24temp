@@ -23,12 +23,8 @@ pub fn part_one(input: &str) -> Option<u64> {
         }
         diff
     }
-    // fn main() {
-    // let test = include_str!("01.txt");
     let test = extract_lists(input);
     let test = process_lists(test);
-    // println!("hello: {test:?}");
-    // }
     Some(test.into())
 }
 
@@ -56,13 +52,8 @@ pub fn part_two(input: &str) -> Option<u64> {
         }
         out
     }
-    // fn main() {
-    // let test = include_str!("01.txt");
     let test = extract_lists(input);
     let test = process_lists(test);
-    // println!("hello: {test:?}");
-    // }
-    // Some(test.into())
     Some(test as u64)
 }
 
@@ -73,12 +64,12 @@ mod tests {
     #[test]
     fn test_part_one() {
         let result = part_one(&advent_of_code::template::read_file("examples", DAY));
-        assert_eq!(result, None);
+        assert_eq!(result, Some(11));
     }
 
     #[test]
     fn test_part_two() {
         let result = part_two(&advent_of_code::template::read_file("examples", DAY));
-        assert_eq!(result, None);
+        assert_eq!(result, Some(31));
     }
 }
