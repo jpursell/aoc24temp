@@ -1,7 +1,7 @@
+use regex::Regex;
 advent_of_code::solution!(3);
 
 pub fn part_one(input: &str) -> Option<u64> {
-    use regex::Regex;
     #[derive(Debug)]
     struct Mul {
         a: usize,
@@ -25,10 +25,6 @@ pub fn part_one(input: &str) -> Option<u64> {
         }
         out
     }
-    // let out = include_str!("03_test.txt");
-    // let out = extract(out);
-    // let out = process(out);
-    // assert_eq!( out , 161);
 
     let out = extract(input);
     let out = process(out);
@@ -38,7 +34,6 @@ pub fn part_one(input: &str) -> Option<u64> {
 }
 
 pub fn part_two(input: &str) -> Option<u64> {
-    use regex::Regex;
     #[derive(Clone, Copy, Debug)]
     enum Token {
         Do,
@@ -92,11 +87,6 @@ pub fn part_two(input: &str) -> Option<u64> {
         }
         out
     }
-    // let out = include_str!("03_testb.txt");
-    // let out = extract(out);
-    // // dbg!(&out);
-    // let out = process(&out);
-    // assert_eq!(out, 48);
 
     let out = extract(input);
     let out = process(&out);
